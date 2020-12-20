@@ -1,0 +1,59 @@
+@font-face{
+  src:url(../font/arial.ttf);
+  font-family: my-font-arial;
+}
+
+body{
+  font-family: my-font-arial ;
+}
+
+.form{
+	width:230px;
+	margin: 0 auto;
+}
+
+a {
+    color: #0067ab; 
+    text-decoration:none;
+}
+
+input[type= 'text'], input[type = 'password'] {
+  margin-top: 10px;
+  font-size: 14px;
+  /*width: 200 px;
+  border - radius: 2 px;
+  border: 1 px solid #CCC;
+  padding: 10 px;
+  color: #333;*/ 
+   
+        
+}
+
+input[type= 'submit'] {
+        margin-top: 10px;
+        width: 100px;
+        color: #fff;
+        background-color: #0067ab;
+        font-size: 16px;
+        cursor:pointer;
+        /*padding: 10px 25px;*/
+        /*text-shadow: rgba(0,0,0,0.24) 0 1px 0; */
+        /*box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,# fff 0 1 px 0 0;*/
+        /*border: 1 px solid #0164a5;*/ 
+        /*border-radius: 2px;*/      
+}
+/*a:hover {text-decoration:underline;}
+*/
+/*input[type= 'submit']:hover {
+  background-color: #024978;
+}*/
+
+
+
+/*.clearfix: before, .clearfix: after {
+  content: "";display: table;
+}
+
+.clearfix: after {
+    clear: both;
+}*/
