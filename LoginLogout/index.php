@@ -1,4 +1,4 @@
-<?php
+<?php	
 	require('auth.php');
 ?>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
 <body>
 	<div class="">
 		<h1>Đây là trang chủ</h1>
-		<p>Xin chào <b><?php echo htmlspecialchars($_SESSION['query']) ?> </b> </p>
+		<p>Xin chào <b><?php echo htmlspecialchars($_SESSION['full_name']) ?> </b> </p>
 		<p><a href="dashboard.php">Bảng điều khiển</a></p>
 		<a href="logout.php">Đăng xuất</a>
 	</div>

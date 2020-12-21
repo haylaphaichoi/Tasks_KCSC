@@ -11,22 +11,25 @@
 	require('db.php');
 	if(isset($_SESSION['username'])){
 		header('Location: index.php');
+		exit();
 	}
 
-	if(isset($_REQUEST['username'])){
+	if(isset($_POST['submit'])){
 
 
-		$first_name = stripslashes($_REQUEST['first_name']);
+		$first_name = $_REQUEST['first_name'];
 		$first_name = mysqli_real_escape_string($con, $first_name);
 
-		$last_name = stripslashes($_REQUEST['last_name']);
+		$last_name = $_REQUEST['last_name'];
 		$last_name = mysqli_real_escape_string($con, $last_name);
 
-		$username = stripslashes($_REQUEST['username']);
+		$username = $_REQUEST['username'];
 		$username = mysqli_real_escape_string($con, $username);
 
-		$password = stripslashes($_REQUEST['password']);
-		$password = md5(mysqli_real_escape_string($con, $password));
+		$password = $_REQUEST['password'];		
+		$password = mysqli_real_escape_string($con, $password);
+		$options = array('cost' => 4);
+		$password = password_hash($password, PASSWORD_BCRYPT, $options);
 
 		// set the default timezone to use. Available since PHP 5.1
 		date_default_timezone_set('Asia/Ho_Chi_Minh');
@@ -34,7 +37,7 @@
 		$regis_date = date("Y-m-d H:i:s");
 
 		//Check username existence
-		$query = "SELECT * FROM users WHERE username= '$username'";
+		$query = "SELECT * FROM users WHERE username= '$username' LIMIT 1";
 		$res = mysqli_query($con, $query);
 		if(mysqli_num_rows($res) > 0 ){
 			$error = "Username existed<br/>Please take other username";

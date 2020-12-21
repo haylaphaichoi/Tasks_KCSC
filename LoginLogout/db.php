@@ -7,7 +7,7 @@
 	$con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 	//Check connection
 	if(mysqli_connect_errno()){
-		echo "Không thể kết nối đến MySQL: ");
+		echo "Không thể kết nối đến MySQL";
 		exit();
 	}
 ?>
