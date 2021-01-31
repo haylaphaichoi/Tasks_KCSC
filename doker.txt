@@ -1,0 +1,27 @@
+Một số lệnh thông dụng trong docker
+
+1. docker ps [OPTIONS] : 
+Liệt kê các container đang chạy
+-a/-all : Liệt kê tất cả các container, kể cả đang chạy hay đã kết thúc
+
+2. docker pull [OPTIONS] <image_name> : 
+Tải các image từ Docker Hub
+
+3. docker run [OPTIONS] <image_name> [COMMAND] : 
+Chạy một container từ image
+VD: docker run image_name -it bash: chạy bash từ container
+
+4. docker logs [OPTIONS] <container_name> : 
+hiển thị logs của một container
+
+5. docker volume ls [OPTIONS] : 
+Liệt kê các volume mà các container sử dụng
+
+6. docker rm [OPTIONS] <list_container_or_id> : 
+xóa một hoặc nhiều container
+
+7. docker rmi [OPTIONS] <list_image_id> : 
+Xóa một hoặc nhiều image
+
+8. docker stop [OPTIONS] <list_container_name_or_id> : 
+Dừng một hay nhiều container đang chạy
